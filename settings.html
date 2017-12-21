@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<title>Hold Your Finger</title>
+		<link rel="stylesheet" href="styles/fonts.css" />
+		<link rel="stylesheet" href="styles/core.css" />
+		<link rel="stylesheet" href="extentions/datapicker/picker.css" />
+	</head>
+	<body>
+		<div class="application settings lightblue-theme">
+			<header class="settings-header">
+				<a class="go-back-button" href="main.html" target="_self"></a>
+				<h1 class="caption">Settings</h1>
+			</header>
+			<div class="settings-container">
+				<p class="setting item">
+					<span class="name">Name:</span>
+					<input type="text" class="name-input" autofocus="true" value="Petya" />
+				</p>
+				<p class="setting item">
+					<span class="name">Sound:</span>
+					<datapicker name="sound" class="select-picker"></datapicker>
+				</p>
+				<p class="setting item">
+					<span class="name">Vibrate:</span>
+					<datapicker name="vibrate" class="select-picker"></datapicker>
+				</p>
+			</div>
+		</div>
+		<script src="scripts/core.js"></script>
+	</body>
+</html>

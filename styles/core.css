@@ -1,0 +1,435 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font: 5vw OpenSans;
+	width: 100%;
+	height: 100%;
+}
+
+.application {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* Main Header Section Started*/
+
+.main-header {
+	width: 100%;
+	min-height: 37.5%;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 18%;
+}
+
+.main-header h1,
+.main-header h2 {
+	text-transform: uppercase;
+	color: #000;
+}
+
+.main-header h1 {
+	font: 4.5em PaytoneOne;
+	line-height: 1.05em;
+}
+
+.main-header h2 {
+	font: 1.8em PaytoneOne;
+}
+
+/* Main Header Section Finished*/
+
+/* Application Content Section Started*/
+
+.application-content {
+	width: 100%;
+	height: 62.5%;
+	display: block;
+}
+
+.color-picker-wrapper {
+	width: 100%;
+	height: 9vw;
+	background: linear-gradient(transparent 46%, rgba(205,205,205,.2), transparent 53%);
+	text-align: center;
+}
+
+.color-picker-wrapper .color-picker {
+	padding: 0 1%;
+	box-sizing: content-box;
+	display: inline-block;
+	width: auto;
+	height: 100%;
+	white-space: nowrap;
+	text-align: inherit;
+	list-style: none;
+}
+
+.color-picker-wrapper .color-picker .item {
+	width: 9vw;
+	height: 100%;
+	display: inline-block;
+	margin: 0 2vw;
+	box-shadow: -6px -6px 20px rgba(0,0,0,.35);
+}
+
+.main-menu {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin: 10% auto auto auto;
+}
+
+.main-menu .item {
+	width: auto;
+	height: 100%;
+	display: inline-block;
+	font: 1.6em OpenSans;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 1px solid rgba(0,0,0,.28);
+	border-width: 1px 0;
+	padding: 1.75% 3%;
+	margin: 1.5% 20%;
+	color: #000;
+	position: relative;
+	overflow: visible;
+	transition: transform .15s ease-in-out;
+}
+
+.main-menu .item::after,
+.main-menu .item::before{
+	content: '';
+	width: 25px;
+	height: 100%;
+	display: block;
+	position: absolute;
+	background: linear-gradient(to top left, transparent 48%, rgba(0,0,0,.28), transparent 52%),  linear-gradient(to top right, transparent 48%, rgba(0,0,0,.28), transparent 52%) no-repeat;
+	background-size: 200% 100%;
+}
+
+.main-menu .item::after {
+	top: 0;
+	left: -24px;
+	background-position: 100% 100%;
+}
+.main-menu .item::before {
+	top: 0;
+	right: -24px;
+}
+
+.main-menu .item:active {
+	transform: scale(1.1);
+}
+
+/* Application Content Section Finished*/
+
+/* Results started*/
+
+.results,
+.settings {
+	font: 1em PaytoneOne;
+}
+
+.results .results-header,
+.settings .settings-header {
+	width: 100%;
+	height: 15.5%;
+	background: rgba(255,255,255,.2);
+}
+
+.results .results-header .go-back-button,
+.settings .settings-header .go-back-button {
+	width: 20%;
+	height: 100%;
+	display: inline-block;
+	position: relative;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+.results .results-header .go-back-button::after,
+.settings .settings-header .go-back-button::after {
+	content: '';
+	display: block;
+	width: 15px;
+	height: 30px;
+	background: linear-gradient(to top right, transparent 46%, #000, transparent 54%), linear-gradient(to top left, transparent 46%, #000, transparent 54%) no-repeat;
+	background-size: 200% 100%;
+	background-position: 99% 0;
+	position: absolute;
+	border-radius: 50%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.results .results-header .caption,
+.settings .settings-header .caption {
+	font-size: 3em;
+	display: inline-block;
+	width: 78%;
+	margin: 0;
+	vertical-align: top;
+	text-transform: uppercase;
+	line-height: 1.7em;
+	color: #333;
+}
+
+.results .results-container,
+.settings .settings-container {
+	width: 100%;
+	height: 84.5%;
+	display: block;
+	font-size: 2em;
+	color: #000;
+}
+
+.results .results-container .result,
+.settings .settings-container .setting {
+	width: 100%;
+	display: block;
+	margin-top: 1.5%;
+}
+
+.results .results-container .result.my,
+.settings .settings-container .setting.my {
+	background: rgba(0,0,0,.1);
+}
+
+.results .results-container .result .score {
+	text-align: right;
+	width: 40%;
+	display: inline-block;
+	padding-right: 7%;
+	box-sizing: border-box;
+	font-size: 0.8em;
+}
+
+.settings .settings-container {
+	margin-top: 15%;
+	font-size: 1.9em;
+}
+
+.settings .settings-container .setting {
+	margin-top: 9%;
+}
+
+.results .results-container .result .username {
+	text-align: left;
+	width: 58%;
+	display: inline-block;
+	padding-left: 7%;
+	box-sizing: border-box;
+}
+
+.settings .settings-container .setting .name {
+	padding-left: 10%;
+	padding-right: 3%;
+}
+
+.settings .settings-container .setting .name-input {
+	border: none;
+	outline: none;
+	background: transparent;
+	font: .7em PaytoneOne;
+	width: 47%;
+	border-bottom: 1px solid #000;
+	text-align: center;
+}
+
+.settings .settings-container .setting .select-picker {
+	width: 45%;
+	display: inline-block;
+	height: 5vh;
+	float: right;
+	margin-top: 3%;
+}
+
+.settings .settings-container .setting .select-picker .data .item {
+	font-size: 1.3rem;
+}
+
+.settings .settings-container .setting .select-picker .controls::before,
+.settings .settings-container .setting .select-picker .controls::after {
+	border-width: 5px;
+	width: 3vh;
+}
+
+
+/* Results finished*/
+
+
+/* Game Section Started */
+
+.game {
+	position: relative;
+}
+
+.game .game-header {
+	width: 100%;
+	height: 8%;
+	background: rgba(255,255,255,.15);
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	color: #333;
+}
+
+.game .game-header .score-caption {
+	display: inline-block;
+	height: 100%;
+	padding: 0 2%;
+	font: 1.3em PaytoneOne;
+	margin-left: 4%;
+	text-transform: uppercase;
+}
+.game .game-header .score-caption:first-letter {
+	font: 1.3em PaytoneOne;
+}
+
+.game .game-header .score-value {
+	font: 1.7em PaytoneOne;
+}
+
+/* Game Section Finished */
+
+/*Popup*/
+
+.overlay-parent {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: block;
+	background: rgba(0,0,0,.5);
+	top: 0;
+	left: 0;
+}
+
+.overlay-parent .popup {
+	width: 100%;
+	height: 50%;
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	font: 1em PaytoneOne;
+	text-align: center;
+}
+
+.overlay-parent .popup.lose {
+	height: 30%;
+}
+
+.overlay-parent .popup.name {
+	height: 40%;
+}
+
+.overlay-parent .popup.lose h1 {
+	text-transform: uppercase;
+	font-size: 1.9em;
+}
+
+.overlay-parent .popup.name h1 {
+	font-size: 1.9em;
+	margin-top: 5%;
+}
+
+.overlay-parent .popup.name .name-field {
+	width: 80%;
+	border: none;
+	border-bottom: 1px solid #000;
+	background: transparent;
+	font: 1.5em PaytoneOne;
+	text-align: center;
+	outline: none;
+	margin: 7% 0;
+}
+
+.overlay-parent .popup.name .actions {
+	width: 100%;
+}
+
+.overlay-parent .popup.name .actions .go {
+	width: 80%;
+    height: 15vw;
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+    font: 1.1em PaytoneOne;
+}
+
+.overlay-parent .popup.lose h1:first-letter {
+	font-size: 1.4em;
+}
+.overlay-parent .popup.lose h2 {
+	margin: 2% 0 5% 0;
+}
+
+.overlay-parent .popup.lose h2 span {
+	margin-left: .4em;
+}
+
+.overlay-parent .popup.lose .actions {
+	width: 100%;
+	display: block;
+}
+
+.overlay-parent .popup.lose .actions .button {
+	width: 42%;
+	border: 2px solid #000;
+	background: transparent;
+	color: #000;
+	font: 1.1em PaytoneOne;
+	outline: none;
+	padding: 0.5% 1.1% 1.5% 1.1%;
+	border-radius: 3px;
+	margin-right: 1%;
+}
+
+.overlay-parent .popup.lose .actions .button::before {
+	content: '';
+	display: inline-block;
+	width: 1.1em;
+	height: 1.3em;
+	margin-right: 5px;
+	vertical-align: bottom;
+}
+
+.overlay-parent .popup.lose .actions .button.go-menu::before {
+	background: url(../img/menu-icon.svg) no-repeat center;
+	background-size: 100%;
+}
+
+.overlay-parent .popup.lose .actions .button.start-again::before {
+	background: url(../img/refresh-icon.svg) no-repeat center;
+	background-size: 100%;
+}
+
+/**/
+
+.lightblue-theme {
+	background: #54aaff;
+}
+
+.red-theme {
+	background: #d24a43;
+}
+
+.white-theme {
+	background: #fff;
+}
+
+.orange-theme {
+	background: #ffa200;
+}
