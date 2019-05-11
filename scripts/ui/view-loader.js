@@ -1,8 +1,7 @@
 /*
-*	new ViewLoader({
+*	new ViewLoader(
 *		filepath,
-*		
-*	})
+*	)
 *
 *
 *
