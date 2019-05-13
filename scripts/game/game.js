@@ -4,5 +4,5 @@ import Player from './player.js';
 import Line from './line.js';
 
 class Game {
-
+	
 };

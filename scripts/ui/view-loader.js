@@ -10,6 +10,6 @@
 *
 */
 
-class ViewLoader {
+function loadView(path) {
 
-};
+}
